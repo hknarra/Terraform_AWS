@@ -1,7 +1,7 @@
-# Create 1 iam user
+# Create 1 iam user in AWS
 ------------------------
 
-versions.tf
+#### versions.tf file:
 ```
 # Terraform Block
 terraform {
@@ -21,3 +21,12 @@ provider "aws" {
   profile = "default" # shared credential file (authentication) 
 }
 ```
+
+
+#### iam ceration code:
+```
+# resource
+resource "aws_iam_user" "devuser" {
+  name = "user1"
+
+}```
