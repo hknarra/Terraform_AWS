@@ -23,29 +23,6 @@ resource "aws_s3_bucket_acl" "example_bucket_acl" {
   
 }
 
-/* 
-resource "aws_iam_policy" "replication" {
-  name = "tf-iam-role-policy-replication-12345"
-  policy = <<POLICY
-{
-  "Version": "2012-10-17",
-  "Statement": [
-      {
-          "Sid": "PublicReadGetObject",
-          "Effect": "Allow",
-          "Principal": "*",
-          "Action": [
-              "s3:GetObject"
-          ],
-          "Resource": [
-              "arn:aws:s3:::${var.bucket_name}/*"
-          ]
-      }
-  ]
-}  
-POLICY
-}
-*/
 
 resource "aws_s3_bucket_policy" "allow_access_from_another_account" {
   bucket = aws_s3_bucket.s3_bucket.id
@@ -57,8 +34,7 @@ data "aws_iam_policy_document" "allow_access_from_another_account" {
     # "Principal": "*",
     principals {
       type        = "AWS"
-      # identifiers = ["aws-acc-id"]
-      identifiers = [ "*" ]
+      identifiers = ["*"]
     }
 
     actions = [
