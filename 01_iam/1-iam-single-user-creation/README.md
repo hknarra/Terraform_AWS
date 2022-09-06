@@ -29,4 +29,5 @@ provider "aws" {
 resource "aws_iam_user" "devuser" {
   name = "user1"
 
-}```
+}
+```
