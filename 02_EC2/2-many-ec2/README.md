@@ -1,6 +1,6 @@
 # Create multiple EC2 resources with terraform
 
-Creating multiple ec2 instances with count "meta argumemt" 
+Creating multiple ec2 instances using count "meta argumemt" with single Resource
 
 ```
 # Create many EC2 Instance s
