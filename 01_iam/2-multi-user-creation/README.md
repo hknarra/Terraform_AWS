@@ -1,5 +1,5 @@
 # Create multiple IAM users:
-Create multiple iam users in aws using for_each meta argument with 1 resource
+Create multiple iam users in aws using for_each string meta argument with 1 resource
 ```
 # 
 resource "aws_iam_user" "myuser" {

@@ -10,9 +10,8 @@ terraform {
 }
 
 # Provider block
-# default provider
+# Provider 1 (default provider)
 provider "aws" {
   region  = "us-east-1"
   profile = "default" # shared credential file (authentication) 
 }
-
