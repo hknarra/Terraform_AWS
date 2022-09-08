@@ -8,7 +8,7 @@ module "ec2_cluster" {
 
   ami                    = data.aws_ami.amzlinux.id
   instance_type          = "t2.micro"
-  key_name               = "terraform-key"
+  key_name               = "hk-key"
   monitoring             = true
   vpc_security_group_ids = ["sg-0530cf93d3e384288"]
   subnet_id              = "subnet-0ca0a441e0cba6d68"
